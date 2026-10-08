@@ -1,0 +1,18 @@
+[package]
+name = "symbolic_enum"
+version = "0.1.0"
+edition = "2024"
+description = "A derive macro for dual-mode Serde enums: strings in human-readable formats, 32-bit FNV-1a hashes in binary, as_str and FromStr conversions, and enum iteration."
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+[features]
+default = []
+output_hash = [] # Enabling this feature forces integer hash output globally
+
+[dependencies]
+proc-macro2 = "1.0.107"
+quote = "1.0.47"
+syn = "3.0.6"
